@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" aboutcontent="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    /* .aboutus{
+        background-image: linear-gradient(90deg, #D0F0EB, #bef8f3);
+        margin-top: 100px;
+        margin-bottom: 170px;
+        height: 100vh;
+    }
+    .about{
+        background-color: #239191;
+        border-radius: 15px;
+        box-shadow: 0 7px 20px 5px #00000088;
+        justify-content: center;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        gap: 40px;
+        margin-bottom: 5%;
+    }
+
+    .aboutpara{
+        width: 400px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .aboutcontent{
+        width: 600px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    } */
+
+    .c{
+  margin-top: 100px;
+  margin-bottom: 170px;
+}
+.contact{
+  justify-content: center;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 40px;
+}
+
+.contact__title {
+  text-align: center;
+  margin-bottom: 30px;
+
+}
+
+.contact__info{
+  display: flex;
+  gap:30px;
+}
+
+.contact__card {
+  width: 140px ;
+  height: 140px;
+  background-color: #e1b0fe;
+  padding: 2rem 1rem;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.contact__card-icon {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.contact__card-title,
+.contact__card-data {
+  font-size: 12px;
+  color: #fff;
+}
+
+.contact__card-data {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.contact__button {
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.25rem;
+  cursor: pointer;
+}
+
+.contact__button:hover .contact__button-icon {
+  transform: translateX(0.25rem);
+}
+
+.talk{
+  width: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content{
+  width: 600px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-form {
+  width:80%;
+}
+
+ .content h6{
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+ .content .contact-form input,
+.content .contact-form textarea{
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  padding: 10px;
+  font-size: 0.9rem;
+  border-radius: 0.4rem;
+  border: 1px solid black;
+}
+.content .contact-form textarea{
+  resize: none;
+  height: 200px;
+}
+.content .contact-form .send{
+  border: none;
+  background-color: #dbb6ee;
+  outline: none;
+  font-size: 1rem;
+  font-weight: medium;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+}
+.content .contact-form .send:hover{
+  transition: 0.4s;
+  background-color: #512260;
+  color: white;
+}
+
+.map{
+  border:0; 
+  margin: 10px;
+  border-radius: 10px;
+  width: 320px;
+  height: 280px;
+}
+    
+
+</style>
+<body>
+
+    <section class="c" id="contact">
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 w-50">
+            <form action="register.php" method="post">
+                <div class="row">
+                    <div class="mb-3 col-6">
+                        <label for="fname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="fname" name="fname" required>
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="lname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lname" name="lname" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phoneno" class="form-label">Phone No.</label>
+                    <input type="tel" class="form-control" id="phoneno" name="phoneno">
+                </div>
+
+                <!-- <script>
+                   const phoneInputField = document.querySelector("#phoneno");
+                    const phoneInput = window.intlTelInput(phoneInputField, {
+                        utilsScript:
+                        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                    });
+                    const phoneNumber = phoneInput.getNumber();
+
+                </script> -->
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="textarea" class="form-control" id="address" name="address">
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-4">
+                        <label for="zipcode" class="form-label">Zip Code</label>
+                        <input type="tel" class="form-control" id="zipcode" name="zipcode">
+                    </div>
+                    <div class="mb-3 col-4">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" name="city">
+                    </div>
+                    <div class="mb-3 col-4">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" class="form-control" id="country" name="country">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-6">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="cpassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="cpassword" name="cpassword">
+                    </div>
+                </div>
+
+
+                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <p>Already have an account? <a href="login.php">Log in</a></p>
+        </div>
+        <div class="col-3"></div>
+    </div>
+      </section>
+
+      <form action="">
+        <label for="quantity">Quantity (between 1 and 5):</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5">
+  <input type="submit" value="Submit">
+      </form>
+    <!-- <section class="aboutus" id="aboutus">
+        <h2 style="margin: 0px 0px 0px; padding-top: 40px; padding-bottom: 40px; font-weight: bolder; letter-spacing: 0.7rem; 
+        text-align: center;">ABOUT US</h2>
+        
+        <div class="about">
+          <div class="aboutcontent reveal1">
+            <img src="./images/Medical3.gif" alt="">
+          </div>
+          <div class="aboutpara reveal1">
+            <h5>"Your one-stop shop for all your healthcare needs"</h5>
+            <h3>LET'S TALK ABOUT AL-DAWA</h3>
+            <p>We offer a variety of products ranging from prescription drugs to over-the-counter
+                medications, as well as medical supplies and equipment. Our online store is easy to use and provides
+                a hassle-free shopping experience. With just a few clicks, you can order your desired product and
+                have it delivered to your doorstep in no time. Our team of licensed pharmacists and healthcare
+                professionals is available to assist you with any questions or concerns you may have about your
+                medications or medical supplies.
+            <div>We understand the importance of quality and safety when it comes to healthcare
+                products. That's why we source our products from reputable manufacturers and suppliers. </div>
+            </p>
+            <h5>FEATURES OF OUR PRODUCTS</h5>
+                <ul>
+                    <li>100% original</li>
+                    <li>Safe and secure packaging</li>
+                    <li style="padding-bottom: 3%;">Stored in consistent temperature</li>
+                </ul>
+          </div>
+        </div>
+    </section> -->
+
+    
+</body>
+</html>
