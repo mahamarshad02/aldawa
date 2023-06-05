@@ -14,6 +14,6 @@
    <li> Formspree, a backend-endabled email delivery service provided by a third-party. </li>
 </ul>
 
-## To assess admin panel
+## To access admin panel
 <h6>Admin Username</h6><span> <p>admin</p></span>
 <h6>Admin Password</h6> <p>admin</p>
