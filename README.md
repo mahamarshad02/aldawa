@@ -30,6 +30,4 @@
 <h6>7. Access "aldawa" project:</h6>
 <p>Open a web browser and type http://localhost/aldawa/index.html in the address bar. This will load the project's index.html file and display the project in your web browser.</p>
 
-## To access admin panel
-<h6>Admin Username</h6><span> <p>admin</p></span>
-<h6>Admin Password</h6> <p>admin</p>
+
