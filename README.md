@@ -38,5 +38,5 @@
    <li>The chatbot is connected to the interface using jQuery and AJAX, while the interface was developed using HTML and CSS. Ajax           enables web applications to send and receive data asynchronously from a server without changing how a page looks or functions.</li>
    <li>Type python main.py in your terminal or command prompt to communicate with the chatbot. This command will train the model and         provide you with a link.</li>
 </ul>
-
+<img src="./images/chatbot3.png">
 
