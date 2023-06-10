@@ -39,4 +39,6 @@
    <li>Type python main.py in your terminal or command prompt to communicate with the chatbot. This command will train the model and         provide you with a link.</li>
 </ul>
 <img src="./images/chatbot3.jpeg">
+<img src="./images/chatbot1.jpeg">
+<img src="./images/chatbot2.jpeg">
 
