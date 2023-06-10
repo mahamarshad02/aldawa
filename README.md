@@ -15,6 +15,7 @@
 
 
 ## Steps to follow
+<h4>For Website</h4>
 <h6>1. Install XAMPP:</h6>
 <p>Download and install XAMPP from the Apache Friends website (https://www.apachefriends.org/index.html). Choose the appropriate version for your operating system.</p>
 <h6>2. Start XAMPP:</h6>
@@ -29,5 +30,13 @@
 <p>After creating "aldawa" database, in order to view the database tables, import aldawa.sql file from database folder in the repository by clicking on "import" button inside the "aldawa" database, that you just created.</p>
 <h6>7. Access "aldawa" project:</h6>
 <p>Open a web browser and type http://localhost/aldawa/index.html in the address bar. This will load the project's index.html file and display the project in your web browser.</p>
+
+<h4>For Chatbot</h4>
+<ul>
+   <li>You should have Python, Pip, and Flask installed on your computer in order to run the chatbot.</li>
+   <li>This chatbot model makes use of the chatterbot library, which uses listtrainer to train the conversation. As a result, you must       also install the chatterbot.Using this command, "install chatterbot with pip" you can install it in your terminal or from within cmd.     </li>
+   <li>The chatbot is connected to the interface using jQuery and AJAX, while the interface was developed using HTML and CSS. Ajax           enables web applications to send and receive data asynchronously from a server without changing how a page looks or functions.</li>
+   <li>Type python main.py in your terminal or command prompt to communicate with the chatbot. This command will train the model and         provide you with a link.</li>
+</ul>
 
 
