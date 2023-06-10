@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: rgb(44, 47, 59);
+            background: -webkit-linear-gradient(to right, rgb(40, 59, 34), rgb(54, 60, 70), rgb(32, 32, 43));
+            background: linear-gradient(to right, rgb(38, 51, 61), rgb(50, 55, 65), rgb(33, 33, 78));
+            margin: 0;
+            padding: 0;
+        }
+
+        .chatbot-container {
+            max-width: 70%;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border-radius: 15px !important;
+            background-color: rgba(0, 0, 0, 0.4) !important;
+        }
+
+        .chat-header {
+            background-color: rgb(5, 5, 32);
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .chat-body {
+            padding: 20px;
+            height: 300px;
+            overflow-y: scroll;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .message .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .message .user-message {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .message .bot-avatar {
+            margin-left: auto;
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: crimson;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .message .bot-message {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .chat-footer {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+
+            border-radius: 15px 0 0 15px !important;
+            background-color: rgba(0, 0, 0, 0.3) !important;
+            border: 0 !important;
+            color: white !important;
+        }
+
+        .chat-input {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .send-button {
+            padding: 10px 20px;
+            background-color: teal;
+            font-weight: bold;
+            border-radius: 0 15px 15px 0 !important;
+            background-color: rgba(0, 0, 0, 0.3) !important;
+            border: 0 !important;
+            color: white !important;
+            cursor: pointer;
+        }
+
+        .send-button:hover {
+            background-color: darkgreen !important;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function sendUserInput() {
+            var userInput = $(".chat-input").val();
+            if (userInput !== "") {
+                $(".chat-body").append('<div class="message"><div class="user-avatar">U</div><div class="user-message">' + userInput + '</div></div>');
+                $(".chat-input").val("");
+                $(".chat-body").scrollTop($(".chat-body")[0].scrollHeight);
+                $.ajax({
+                    url: "/get_response",
+                    type: "POST",
+                    data: { user_input: userInput },
+                    success: function (response) {
+                        var botResponse = response.bot_response;
+                        $(".chat-body").append('<div class="message"><div class="bot-avatar">B</div><div class="bot-message">' + botResponse + '</div></div>');
+                        $(".chat-body").scrollTop($(".chat-body")[0].scrollHeight);
+                    }
+                });
+            }
+        }
+
+        $(document).ready(function () {
+            $(".chat-input").keypress(function (event) {
+                if (event.which == 13) {
+                    sendUserInput();
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="chatbot-container">
+        <div class="chat-header">
+            <h2 >My Bot</h2>
+        </div>
+        <div class="chat-body">
+            <!-- Chat messages will be dynamically added here -->
+        </div>
+        <div class="chat-footer">
+            <input type="text" class="chat-input" placeholder="Type your message...">
+            <button class="send-button" onclick="sendUserInput()">Send</button>
+        </div>
+    </div>
+</body>
+
+</html>
